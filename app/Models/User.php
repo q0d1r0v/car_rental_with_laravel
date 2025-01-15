@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    public $incrementing = false;
+    use HasFactory;
+
+    protected $fillable = [
+        'username',
+        'email',
+        'password',
+        'role_id',
+    ];
+
+    protected $hidden = ['password'];
+}
